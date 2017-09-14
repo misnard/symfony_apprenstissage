@@ -1,0 +1,11 @@
+mi_front_homepage:
+    path:     /
+    defaults: { _controller: MIFrontBundle:Main:index }
+
+mi_front_product:
+    path:     /product/{id}
+    defaults: { _controller: MIFrontBundle:Main:product }
+
+mi_front_command_step_1:
+    path:     /command/step/1
+    defaults: { _controller: MIFrontBundle:Main:commandStep1 }

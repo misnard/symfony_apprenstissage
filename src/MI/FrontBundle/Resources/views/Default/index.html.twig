@@ -1,0 +1,126 @@
+{% extends "MIFrontBundle::layout.html.twig" %}
+
+{% block body %}
+    <main>
+        <!--site header-->
+        <header class="site-header">
+            <div class="container">
+                <div class="home-boxed-slider style-4 caption-slider dir-nav">
+                    <div class="home-slider-item">
+                        <div class="item-image"><img src="{{ asset('assets/images/home-box-2c.jpg') }}" alt="Home slider image" class="img-responsive">
+                            <div class="overlay">
+                                <div class="cell-vertical-wrapper">
+                                    <div class="cell-middle">
+                                        <div class="caption-wrapper text-center"><img src="{{ asset('assets/images/logo-7-white.svg') }}" alt="Home logo image" data-caption-animation="fadeIn" class="caption">
+                                            <h4 data-caption-animation="fadeIn" class="caption hidden-xs">WELCOME TO WOLVERINE <br> FUNITURE</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-slider-item">
+                        <div class="item-image"><img src="{{ asset('assets/images/home-box-1c.jpg') }}" alt="Home slider image" class="img-responsive">
+                            <div class="overlay">
+                                <div class="cell-vertical-wrapper">
+                                    <div class="cell-middle">
+                                        <div class="caption-wrapper text-center"><img src="{{ asset('assets/images/logo-7-white.svg') }}" alt="Home logo image" data-caption-animation="fadeIn" class="caption">
+                                            <h4 data-caption-animation="fadeIn" class="caption hidden-xs">WELCOME TO WOLVERINE <br> FUNITURE</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-slider-item">
+                        <div class="item-image"><img src="{{ asset('assets/images/home-box-3c.jpg') }}" alt="Home slider image" class="img-responsive">
+                            <div class="overlay">
+                                <div class="cell-vertical-wrapper">
+                                    <div class="cell-middle">
+                                        <div class="caption-wrapper text-center"><img src="{{ asset('assets/images/logo-7-white.svg') }}" alt="Home logo image" data-caption-animation="fadeIn" class="caption">
+                                            <h4 data-caption-animation="fadeIn" class="caption hidden-xs">WELCOME TO WOLVERINE <br> FUNITURE</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-slider-item">
+                        <div class="item-image"><img src="{{ asset('assets/images/home-box-4c.jpg') }}" alt="Home slider image" class="img-responsive">
+                            <div class="overlay">
+                                <div class="cell-vertical-wrapper">
+                                    <div class="cell-middle">
+                                        <div class="caption-wrapper text-center"><img src="{{ asset('assets/images/logo-7-white.svg') }}" alt="Home logo image" data-caption-animation="fadeIn" class="caption">
+                                            <h4 data-caption-animation="fadeIn" class="caption hidden-xs">WELCOME TO WOLVERINE <br> FUNITURE</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--end site header-->
+        <section class="no-padding-bottom pt-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12 shop-homepage-banner-wrapper-2">
+                        <div style="background-image: url({{ asset('assets/images/shop-hp-banner-4.jpg') }});" class="shop-homepage-banner-2"><a href="#">
+                                <div class="overlay"></div></a></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 shop-homepage-banner-wrapper-2">
+                        <div style="background-image: url({{ asset('assets/images/shop-hp-banner-5.jpg') }});" class="shop-homepage-banner-2"><a href="#">
+                                <div class="overlay"></div></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="no-padding-bottom pt-60">
+            <div class="container text-center shop-homepage-1-category-links-wrapper mb-80">
+                <div class="shop-homepage-1-category-links"><a href="#" class="active">ALL</a><a href="#">TABLE</a><a href="#">CHAIR</a><a href="#">DECORATIVE</a><a href="#">SALE</a></div>
+            </div>
+            <div class="container">
+                <div class="row product-listing-1">
+                    {% for product in products %}
+                        <div class="col-md-4 col-sm-6 col-xs-12 shop-product-1-wrapper">
+                            <div class="shop-product-1">
+                                <div class="image"><img src="{{ asset( product.picture ) }}" alt="Shop Product">
+                                    <div class="overlay">
+                                        <ul>
+                                            <li><a href="#" data-toggle="modal" data-target="#product-quick-view-{{ product.id }}" class="quick-view"><i class="icon-search-icon"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="info clearfix"><a href="shop-detail-1.html" class="name">{{ product.name }}</a><a href="shop-cart.html" class="add-to-cart"><i class="icon-svg-icon-16"></i></a>
+                                    <div class="price">
+                                        <span>{{ product.price }} €</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="shop-product-1 next-page"><a href="#">
+                                <div class="fixed-ratio-1-1 bgc-gray text-center">
+                                    <div class="fixed-ratio-content">
+                                        <h5>NEXT PAGE</h5><i class="icon-outline-vector-icons-pack-149 fz-common-2"></i>
+                                    </div>
+                                </div></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mb-80">
+                <div class="shop-homepage-other-links"><a href="#" class="border-btn border-btn-lightgray btn-size-3">NEWSLETTER</a><br><a href="shop-cart" class="normal-btn normal-btn-gray btn-size-3">GO TO CART</a></div>
+            </div>
+        </section>
+        <!--site footer-->
+        <footer class="footer-preset-04">
+            <h1><a href="index.html">WOLVERINE</a></h1>
+            <div class="social-04"><a href="#">FACEBOOK</a><a href="#">TWITTER</a><a href="#">PINTEREST</a><a href="#">INSTAGRAM</a><a href="#">GMAIL</a></div>
+            <p>© 2015 All Rights Reserved OSThemes</p>
+            <p>Contact Envato Support</p>
+        </footer>
+    </main>
+    {% include('MIFrontBundle:Default:productmodal.html.twig') %}
+{% endblock %}

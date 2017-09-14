@@ -1,0 +1,111 @@
+{% for product in products %}
+    <div id="product-quick-view-{{ product.id }}" role="dialog" class="modal fade product-quick-view">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" data-dismiss="modal" class="close"></button>
+                    <div class="content clearfix">
+                        <div class="product-thumbnail-slider-wrapper">
+                            <div class="product-thumbnail-slider">
+                                <div class="product-syn-slider-1 syn-slider-1 dir-nav">
+                                    <div class="product-slider-item">
+                                        <div class="item-image"><img src="{{ asset('assets/images/product-img-1.jpg') }}" data-mfp-src="{{ asset('assets/images/product-img-1.jpg') }}" alt="Product slider image" class="mfp-item"></div>
+                                    </div>
+                                    <div class="product-slider-item">
+                                        <div class="item-image"><img src="{{ asset('assets/images/product-img-2.jpg') }}" data-mfp-src="{{ asset('assets/images/product-img-2.jpg') }}" alt="Product slider image" class="mfp-item"></div>
+                                    </div>
+                                    <div class="product-slider-item">
+                                        <div class="item-image"><img src="{{ asset('assets/images/product-img-3.jpg') }}" data-mfp-src="{{ asset('assets/images/product-img-3.jpg') }}" alt="Product slider image" class="mfp-item"></div>
+                                    </div>
+                                    <div class="product-slider-item">
+                                        <div class="item-image"><img src="{{ asset('assets/images/product-img-4.jpg') }}" data-mfp-src="{{ asset('assets/images/product-img-4.jpg') }}" alt="Product slider image" class="mfp-item"></div>
+                                    </div>
+                                    <div class="product-slider-item">
+                                        <div class="item-image"><img src="{{ asset('assets/images/product-img-5.jpg') }}" data-mfp-src="{{ asset('assets/images/product-img-5.jpg') }}" alt="Product slider image" class="mfp-item"></div>
+                                    </div>
+                                </div>
+                                <div class="product-syn-slider-2-wrapper">
+                                    <div class="product-syn-slider-2 syn-slider-2">
+                                        <div class="product-slider-item">
+                                            <div class="item-image text-center layout-after"><img src="{{ asset('assets/images/product-img-1.jpg') }}" alt="Product slider image"></div>
+                                        </div>
+                                        <div class="product-slider-item">
+                                            <div class="item-image text-center layout-after"><img src="{{ asset('assets/images/product-img-2.jpg') }}" alt="Product slider image"></div>
+                                        </div>
+                                        <div class="product-slider-item">
+                                            <div class="item-image text-center layout-after"><img src="{{ asset('assets/images/product-img-3.jpg') }}" alt="Product slider image"></div>
+                                        </div>
+                                        <div class="product-slider-item">
+                                            <div class="item-image text-center layout-after"><img src="{{ asset('assets/images/product-img-4.jpg') }}" alt="Product slider image"></div>
+                                        </div>
+                                        <div class="product-slider-item">
+                                            <div class="item-image text-center layout-after"><img src="{{ asset('assets/images/product-img-5.jpg') }}" alt="Product slider image"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-detail-2">
+                            <h3>{{ product.name }}</h3>
+                            <h1 class="color-main">{{ product.price }} €</h1>
+                            <div class="text">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="rating clearfix">
+                                <div data-rating='4' class="star-ratings"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                <p>(1 customer review)</p>
+                            </div>
+                            <form class="product-option">
+                                <div class="clearfix">
+                                    <div class="colour">
+                                        <div>
+                                            <p>Colour:</p>
+                                        </div>
+                                        <div>
+                                            <label class="color-option-1">
+                                                <input type="radio" name="product-1" value="color 1"><span><i class="radio-button"></i></span>
+                                            </label>
+                                            <label class="color-option-2">
+                                                <input type="radio" name="product-1" value="color 2" checked><span><i class="radio-button"></i></span>
+                                            </label>
+                                            <label class="color-option-3">
+                                                <input type="radio" name="product-1" value="color 3"><span><i class="radio-button"></i></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="size">
+                                        <div>
+                                            <p>Size:</p>
+                                        </div>
+                                        <div>
+                                            <select name="size">
+                                                <option value="none">-</option>
+                                                <option value="S">S</option>
+                                                <option value="M">M</option>
+                                                <option value="L">L</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="quantity-wrapper">
+                                        <div class="quantity">
+                                            <p>Quantity:</p>
+                                            <input type="number" name="quantity" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="cart-button"><a href="shop-cart.html" class="normal-btn normal-btn-gray btn-size-3"> <i class="icon-svg-icon-16"></i>ADD TO CART</a></div>
+                                </div>
+                            </form>
+                            <div class="product-detail-others">
+                                <p>SKU:&nbsp;<a href="#">0010</a></p>
+                                <p>CATEGORY:&nbsp;<a href="#">Other</a></p>
+                                <p>TAGS:&nbsp;<a href="#">Watch</a>,&nbsp;<a href="#">Fashion</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,7 @@
+mi_front:
+    resource: "@MIFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

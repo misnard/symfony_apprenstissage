@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Acceuil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ asset('vendors/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendors/animate/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/wolverine/styles.css') }}">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:700,400" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic&amp;subset=latin,latin-ext,cyrillic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendors/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendors/full-page/jquery.fullPage.css') }}">
+    <!--Main stylesheet-->
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    <script src="{{ asset('vendors/modernizr/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script><style> .nav-main-menu > li > ul, .nav-shop-cart{display:none;}</style>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="main-nav-wrapper nav-wrapper-1-2">
+    <nav>
+        <div class="main-nav main-nav-1 type-2 style-2">
+            <div class="container">
+                <div class="nav-logo"><a href="index.html"><img src="{{ asset('assets/images/logo-6.svg') }}" alt="Wolverine"></a></div>
+                <div class="nav-logo logo-2"><a href="index.html"><img src="{{ asset('assets/images/logo-9.svg') }}" alt="Wolverine" class="logo-2"></a></div>
+                <div class="nav-top-search"><a href="#" class="search-trigger-show"></a></div>
+                <ul class="nav-main-menu">
+                    <li><a href="#">HOME</a>
+                        <ul>
+                            <li><a href="{{ path('mi_front_homepage') }}">DEFAULT</a></li>
+                            <li><a href="#">SHOP</a>
+                                <ul>
+                                    <li><a href="homepage-shop-1.html">SHOP 1</a></li>
+                                    <li><a href="homepage-shop-2.html">SHOP 2</a></li>
+                                    <li><a href="homepage-shop-2-caro.html">SHOP 2 CARO</a></li>
+                                    <li><a href="homepage-shop-3.html">SHOP 3</a></li>
+                                    <li><a href="homepage-shop-3-caro.html">SHOP 3 CARO</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav-main-menu small-screen">
+                    <li><a href="#">SHOP</a>
+                        <ul>
+                            <li><a href="shop-category.html">CATEGORY</a></li>
+                            <li><a href="shop-category-caro.html">CATEGORY CARO</a></li>
+                            <li><a href="shop-cart.html">SHOP CART</a></li>
+                            <li><a href="shop-checkout.html">CHECKOUT</a></li>
+                            <li><a href="shop-detail-1.html">DETAIL 1</a></li>
+                            <li><a href="shop-detail-2.html">DETAIL 2</a></li>
+                            <li><a href="shop-successfully.html">PAYMENT SUCCESSFUL</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-hamburger-wrapper">
+                    <div class="cell-vertical-wrapper">
+                        <div class="cell-middle">
+                            <div class="nav-hamburger"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-top-cart"></div>
+            </div>
+            <form class="nav-search-form">
+                <div class="content-wrapper"><img src="{{ asset('assets/images/logo-5-white.svg') }}" alt="logo" class="logo-light"><img src="{{ asset('assets/images/logo-5.svg') }}" alt="logo" class="logo-dark">
+                    <div class="content">
+                        <input type="search" name="search" value="" placeholder="Write search..." class="form-control">
+                        <button>SEARCH</button>
+                    </div><a href="#" class="search-trigger-hide"></a>
+                </div>
+            </form>
+        </div>
+    </nav>
+</div>
+<div class="shop-side-cart-fixed"><a href="#">
+        <div data-content="2" class="shop-side-cart"><i class="icon-svg-icon-16"></i></div></a></div>
+        {% block body %}
+        {% endblock %}
+<script src="{{ asset('vendors/jquery/jquery-1.11.2.min.js') }}"></script>
+<script src="{{ asset('vendors/stellar/jquery.stellar.min.js') }}"></script>
+<script src="{{ asset('vendors/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+<script src="{{ asset('vendors/smooth-scroll/SmoothScroll.js') }}"></script>
+<script src="{{ asset('vendors/bootstrap/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendors/slick/slick.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
+<script>(function(b,o,i,l,e,r){b.GoogleAsnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-57387972-1');ga('send','pageview');</script>
+</body>
+</html>
